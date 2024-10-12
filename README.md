@@ -336,3 +336,9 @@ $ git push <alias> <branch>
 This cheat sheet summarizes the most common Git commands and operations. For more detailed information, refer to the official Git documentation.
 
 ---
+
+
+<p align="center">
+  <a href="https://sabbir-mohammad-sami.vercel.app"><strong>Portfolio &rarr;</strong></a>  <a href="https://discord.com/users/993823123122171934"><strong>Discord &rarr;</strong></a>
+</p>
+
