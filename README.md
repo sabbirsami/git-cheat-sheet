@@ -1,7 +1,7 @@
 
 # Git Cheat Sheet
 
-### Setup
+## Setup
 Set the name and email that will be attached to your commits and tags:
 ```bash
 $ git config --global user.name "your-username"
@@ -10,7 +10,7 @@ $ git config --global user.email "youremail@gmail.com"
 
 ---
 
-### Start a Project
+## Start a Project
 Create a local repo (initialize the current directory as a git repo):
 ```bash
 $ git init <directory>
@@ -23,7 +23,7 @@ $ git clone <url>
 
 ---
 
-### Make a Change
+## Make a Change
 Add a file to staging:
 ```bash
 $ git add <file>
@@ -46,7 +46,7 @@ $ git commit -am "commit message"
 
 ---
 
-### Remove node_module / .env file from GitHub
+## Remove node_module / .env file from GitHub
 To remove a file from your GitHub repository, follow these steps:
 
 1. **Remove the file from your local repository** using the `git rm` command:
@@ -68,9 +68,9 @@ If you want to remove the file from version control but keep it in your local fi
 ```bash
 git rm --cached <file_path>
 ```
----
 
-### Retrieve a File from a Previous Commit
+
+## Retrieve a File from a Previous Commit
 
 To retrieve a file from a previous commit in your Git repository, follow these steps:
 
@@ -94,9 +94,30 @@ To retrieve a file from a previous commit in your Git repository, follow these s
     ```
 
 ---
+---
 
+## Change the Remote Repository URL
 
-### Basic Concepts
+To change the remote repository URL in your Git repository, follow these steps:
+
+1. **View the current remote URL** (optional):
+    ```bash
+    git remote -v
+    ```
+
+2. **Change the remote URL** using the `set-url` command:
+    ```bash
+    git remote set-url origin <new_url>
+    ```
+
+3. **Verify the change** (optional):
+    ```bash
+    git remote -v
+    ```
+
+---
+
+## Basic Concepts
 - `master`: Default development branch
 - `origin`: Default remote name
 - `HEAD`: Current branch
@@ -105,7 +126,7 @@ To retrieve a file from a previous commit in your Git repository, follow these s
 
 ---
 
-### Branches
+## Branches
 List all local branches (add `-r` flag to show all remote branches, `-a` to show all branches):
 ```bash
 $ git branch
@@ -143,7 +164,7 @@ $ git tag <tag-name>
 
 ---
 
-### Merging
+## Merging
 Merge a branch into a branch B (add `--no-ff` to avoid fast-forward merge):
 ```bash
 $ git merge <branch>
@@ -156,7 +177,7 @@ $ git merge --squash <branch>
 
 ---
 
-### Rebasing
+## Rebasing
 Rebase feature branch onto main to incorporate new changes made to main (prevents unnecessary merge commits into feature, keeping history linear):
 ```bash
 $ git checkout feature
@@ -175,7 +196,7 @@ $ git rebase -i Head~3
 
 ---
 
-### Undoing Things
+## Undoing Things
 Move (and/or rename) a file and stage it:
 ```bash
 $ git mv <existing-path> <new-path>
@@ -208,7 +229,7 @@ $ git checkout <commit_ID> <file>
 
 ---
 
-### Review your Repo
+## Review your Repo
 List new or modified files not yet committed:
 ```bash
 $ git status
@@ -231,7 +252,7 @@ $ git diff commit1_ID commit2_ID
 
 ---
 
-### Stashing
+## Stashing
 Store modified and staged changes (to include untracked files, add `-u` flag. For untracked & ignored files, add `-a`):
 ```bash
 $ git stash
@@ -269,7 +290,7 @@ $ git stash clear
 
 ---
 
-### Synchronizing
+## Synchronizing
 Add a remote repo:
 ```bash
 $ git remote add <alias> <url>
